@@ -20,8 +20,9 @@
     .grid-container {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 5px; /* Espacio horizontal y vertical reducido */
-      padding: 10px;
+      column-gap: 10px; /* espacio horizontal ajustado */
+      row-gap: 30px; /* espacio vertical original */
+      padding: 20px;
       justify-items: center;
     }
 
@@ -44,6 +45,13 @@
       text-decoration: none;
       border-radius: 5px;
       display: inline-block;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .discord-button:hover {
+      background-color: #333;
+      transform: scale(1.05);
     }
 
     .clan-details {
