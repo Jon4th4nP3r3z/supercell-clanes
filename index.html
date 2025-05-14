@@ -12,82 +12,77 @@
             background-size: cover;
             margin: 0;
             padding: 0;
+            text-align: center;
         }
 
         h1 {
-            text-align: center;
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
-        .container {
+        .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 20px;
             padding: 20px;
             justify-items: center;
         }
 
         .game-link img {
-            width: 200px;
+            width: 180px;
             border: 2px solid black;
             border-radius: 10px;
-        }
-
-        .game-link {
-            text-align: center;
+            cursor: pointer;
         }
 
         .discord-button {
-            margin: 30px auto;
+            margin: 40px auto 20px;
             padding: 10px 20px;
             background-color: black;
             color: white;
             text-decoration: none;
             display: inline-block;
             border-radius: 5px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            padding-bottom: 40px;
+        }
+
+        .footer-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .clan-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .clan-links a {
+            text-decoration: none;
+            color: #000;
             font-weight: bold;
         }
 
-        .details-section {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            text-align: left;
+        .clan-links a:hover {
+            color: #0077cc;
         }
 
-        .details-section h3 {
-            margin-bottom: 5px;
-            font-size: 16px;
-            text-decoration: underline;
-        }
-
-        .details-section a {
-            display: block;
-            font-size: 14px;
-            color: #000;
-            text-decoration: none;
-            margin-bottom: 4px;
-        }
-
-        .details-section a:hover {
-            text-decoration: underline;
-            color: #555;
-        }
-
-        @media (max-width: 768px) {
-            .details-section {
-                position: static;
-                margin: 20px;
-                text-align: center;
+        @media (max-width: 600px) {
+            .clan-links {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
 </head>
 <body>
-
     <h1>Clanes de Supercell</h1>
 
-    <div class="container">
+    <div class="grid-container">
         <a class="game-link" href="https://link.clashroyale.com/invite/clan/es?tag=P990PY2C&token=27e7z7cj&platform=iOS">
             <img src="img/clash_royale.png" alt="Clash Royale">
         </a>
@@ -115,12 +110,13 @@
 
     <a class="discord-button" href="https://discord.gg/srVkYMgH9d">Servidor de Discord</a>
 
-    <div class="details-section">
-        <h3>Detalles de los clanes</h3>
-        <a href="https://royaleapi.com/clan/P990PY2C" target="_blank">Clash Royale</a>
-        <a href="https://www.clashofstats.com/es/clans/puerto-rico-2JP20VPVR/summary" target="_blank">Clash of Clans</a>
-        <a href="https://brawlify.com/stats/club/802CJUR0Y#gsc.tab=0" target="_blank">Brawl Stars</a>
+    <div class="footer">
+        <div class="footer-title">Detalles de clanes</div>
+        <div class="clan-links">
+            <a href="https://royaleapi.com/clan/P990PY2C" target="_blank">Clash Royale</a>
+            <a href="https://www.clashofstats.com/es/clans/puerto-rico-2JP20VPVR/summary" target="_blank">Clash of Clans</a>
+            <a href="https://brawlify.com/stats/club/802CJUR0Y#gsc.tab=0" target="_blank">Brawl Stars</a>
+        </div>
     </div>
-
 </body>
 </html>
