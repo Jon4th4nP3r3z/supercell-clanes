@@ -1,142 +1,143 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Clanes de Supercell</title>
-  <style>
-    body {
-      background-color: #fff;
-      color: #000;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      background-image: url('img/background.png'); /* Fondo restaurado */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
+    <meta charset="UTF-8">
+    <title>Clanes de Supercell</title>
+    <style>
+        body {
+            background-color: #fff;
+            color: #000;
+            font-family: Arial, sans-serif;
+            background-image: url('img/background.png');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
 
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      column-gap: 10px; /* espacio horizontal ajustado */
-      row-gap: 30px; /* espacio vertical original */
-      padding: 20px;
-      justify-items: center;
-    }
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+        }
 
-    .game-link img {
-      width: 200px;
-      border: 2px solid black;
-      border-radius: 10px;
-      transition: transform 0.2s ease;
-    }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin: 30px auto;
+            max-width: 1000px;
+        }
 
-    .game-link img:hover {
-      transform: scale(1.05);
-    }
+        .game-link {
+            display: inline-block;
+        }
 
-    .discord-button {
-      margin: 30px auto 10px;
-      padding: 10px 20px;
-      background-color: black;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
-      font-weight: bold;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
+        .game-link img {
+            width: 180px;
+            border: 2px solid black;
+            border-radius: 10px;
+            transition: transform 0.2s ease;
+        }
 
-    .discord-button:hover {
-      background-color: #333;
-      transform: scale(1.05);
-    }
+        .game-link img:hover {
+            transform: scale(1.05);
+        }
 
-    .clan-details {
-      margin-top: 40px;
-    }
+        .discord-button {
+            display: block;
+            margin: 30px auto 10px;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            width: fit-content;
+            transition: transform 0.2s ease;
+        }
 
-    .clan-details h2 {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
+        .discord-button:hover {
+            transform: scale(1.05);
+        }
 
-    .clan-links {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
+        .details {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
 
-    .clan-links a {
-      color: black;
-      text-decoration: none;
-      font-weight: bold;
-      border: 1px solid #000;
-      padding: 6px 12px;
-      border-radius: 6px;
-      transition: background-color 0.3s ease;
-      background-color: white;
-    }
+        .details h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
 
-    .clan-links a:hover {
-      background-color: #000;
-      color: #fff;
-    }
+        .details a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            position: relative;
+        }
 
-    @media (max-width: 768px) {
-      .grid-container {
-        grid-template-columns: 1fr;
-      }
+        .details a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: black;
+            bottom: -3px;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
 
-      .clan-links {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+        .details a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+    </style>
 </head>
 <body>
-  <h1>Clanes de Supercell</h1>
 
-  <div class="grid-container">
-    <a class="game-link" href="https://link.clashroyale.com/invite/clan/es?tag=P990PY2C&token=27e7z7cj&platform=iOS">
-      <img src="img/clash_royale.png" alt="Clash Royale" />
-    </a>
+    <h1>Clanes de Supercell</h1>
 
-    <a class="game-link" href="https://link.clashofclans.com/es?action=OpenClanProfile&tag=2JP20VPVR">
-      <img src="img/clash_of_clans.png" alt="Clash of Clans" />
-    </a>
+    <div class="container">
+        <a class="game-link" href="https://link.clashroyale.com/invite/clan/es?tag=P990PY2C&token=27e7z7cj&platform=iOS">
+            <img src="img/clash_royale.png" alt="Clash Royale">
+        </a>
 
-    <a class="game-link" href="https://link.brawlstars.com/invite/band/es?tag=802CJUR0Y&token=rar3937t">
-      <img src="img/brawl_stars.png" alt="Brawl Stars" />
-    </a>
+        <a class="game-link" href="https://link.clashofclans.com/es?action=OpenClanProfile&tag=2JP20VPVR">
+            <img src="img/clash_of_clans.png" alt="Clash of Clans">
+        </a>
 
-    <a class="game-link" href="https://link.boombeach.com/?url=boombeach%3A%2F%2FViewTaskforce%3Ftag%3D%23PUQ8200C">
-      <img src="img/boom_beach.png" alt="Boom Beach" />
-    </a>
+        <a class="game-link" href="https://link.brawlstars.com/invite/band/es?tag=802CJUR0Y&token=rar3937t">
+            <img src="img/brawl_stars.png" alt="Brawl Stars">
+        </a>
 
-    <a class="game-link" href="https://go.mo.co/?supercell_id&sg=Pbd6ff863b70641a68a41fb7be80a6106">
-      <img src="img/moco.png" alt="mo.co" />
-    </a>
+        <a class="game-link" href="https://link.boombeach.com/?url=boombeach%3A%2F%2FViewTaskforce%3Ftag%3D%23PUQ8200C">
+            <img src="img/boom_beach.png" alt="Boom Beach">
+        </a>
 
-    <!-- Solo imagen personalizada de Hay Day -->
-    <div class="game-link">
-      <img src="img/hay_day.png" alt="Hay Day" />
+        <a class="game-link" href="https://go.mo.co/?supercell_id&sg=Pbd6ff863b70641a68a41fb7be80a6106">
+            <img src="img/moco.png" alt="mo.co">
+        </a>
+
+        <div class="game-link">
+            <img src="img/hay_day.png" alt="Hay Day">
+        </div>
     </div>
-  </div>
 
-  <a class="discord-button" href="https://discord.gg/srVkYMgH9d">Servidor de Discord</a>
+    <a class="discord-button" href="https://discord.gg/srVkYMgH9d">Servidor de Discord</a>
 
-  <div class="clan-details">
-    <h2>Detalles de clanes</h2>
-    <div class="clan-links">
-      <a href="https://royaleapi.com/clan/P990PY2C" target="_blank">Clash Royale</a>
-      <a href="https://www.clashofstats.com/es/clans/puerto-rico-2JP20VPVR/summary" target="_blank">Clash of Clans</a>
-      <a href="https://brawlify.com/stats/club/802CJUR0Y#gsc.tab=0" target="_blank">Brawl Stars</a>
+    <div class="details">
+        <h2>Detalles de Clanes</h2>
+        <a href="https://royaleapi.com/clan/P990PY2C" target="_blank">Clash Royale</a>
+        <a href="https://www.clashofstats.com/es/clans/puerto-rico-2JP20VPVR/summary" target="_blank">Clash of Clans</a>
+        <a href="https://brawlify.com/stats/club/802CJUR0Y#gsc.tab=0" target="_blank">Brawl Stars</a>
     </div>
-  </div>
+
 </body>
 </html>
