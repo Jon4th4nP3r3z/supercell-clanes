@@ -11,12 +11,16 @@
       text-align: center;
       margin: 0;
       padding: 0;
+      background-image: url('img/background.png'); /* Fondo restaurado */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
     .grid-container {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
+      gap: 5px; /* Espacio horizontal y vertical reducido */
       padding: 10px;
       justify-items: center;
     }
@@ -66,6 +70,7 @@
       padding: 6px 12px;
       border-radius: 6px;
       transition: background-color 0.3s ease;
+      background-color: white;
     }
 
     .clan-links a:hover {
